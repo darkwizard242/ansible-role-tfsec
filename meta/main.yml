@@ -1,0 +1,32 @@
+---
+galaxy_info:
+  role_name: tfsec
+  author: Ali Muhammad
+  description: Installs/Uninstalls 'tfsec', which was developed by Liam Galvin to perform static security analysis of terraform code.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - focal
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - tfsec
+    - system
+    - os
+    - staticanalysis
+    - security
+    - terraform

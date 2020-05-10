@@ -1,0 +1,8 @@
+---
+# tasks file for tfsec
+
+- name: "Downloading and setting up {{ tfsec_app }} {{ tfsec_version }} on EL based systems."
+  get_url:
+    url: "{{ tfsec_dl_url }}"
+    dest: "{{ tfsec_bin_path }}"
+    mode: "{{ tfsec_bin_permission_mode }}"
