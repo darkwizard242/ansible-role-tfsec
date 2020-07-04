@@ -1,7 +1,7 @@
 ---
 # tasks file for tfsec
 
-- name: "Downloading and setting up {{ tfsec_app }} {{ tfsec_version }} on Debian based systems."
+- name: "Debian Family | Downloading and setting up {{ tfsec_app }} {{ tfsec_version }}"
   get_url:
     url: "{{ tfsec_dl_url }}"
     dest: "{{ tfsec_bin_path }}"
