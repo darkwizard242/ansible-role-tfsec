@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 tfsec_app: tfsec
-tfsec_version: 0.36.12
+tfsec_version: 0.36.13
 tfsec_osarch: linux-amd64
 tfsec_dl_url: https://github.com/liamg/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_osarch }}
 tfsec_bin_path: "/usr/local/bin/{{ tfsec_app }}"
