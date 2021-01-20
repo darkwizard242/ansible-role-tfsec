@@ -2,7 +2,7 @@
 # defaults file for tfsec
 
 tfsec_app: tfsec
-tfsec_version: 0.36.14
+tfsec_version: 0.36.15
 tfsec_osarch: linux-amd64
 tfsec_dl_url: https://github.com/liamg/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_osarch }}
 tfsec_bin_path: "/usr/local/bin/{{ tfsec_app }}"
