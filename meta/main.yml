@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: tfsec
-  author: Ali Muhammad
+  author: darkwizard242
   description: Installs/Uninstalls 'tfsec', which was developed by Liam Galvin to perform static security analysis of terraform code.
   company: none
   license: MIT
