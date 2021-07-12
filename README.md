@@ -2,7 +2,7 @@
 
 # Ansible Role: tfsec
 
-Role to install (_by default_) `tfsec` on **Debian/Ubuntu** and **EL** systems. [tfsec](https://github.com/liamg/tfsec) is a static analysis (security based) for scanning terraform code. originally developed by [Liam Galvin](https://github.com/liamg).
+Role to install (_by default_) `tfsec` on **Debian/Ubuntu** and **EL** systems. [tfsec](https://github.com/aquasecurity/tfsec) is a static analysis (security based) for scanning terraform code. originally developed by [Liam Galvin](https://github.com/liamg).
 
 ## Requirements
 
