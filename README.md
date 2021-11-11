@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 tfsec_app: tfsec
-tfsec_version: 0.58.14
+tfsec_version: 0.59.0
 tfsec_osarch: linux-amd64
 tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_osarch }}
 tfsec_bin_path: "/usr/local/bin/{{ tfsec_app }}"
@@ -28,7 +28,7 @@ tfsec_bin_permission_mode: '0755'
 Variable                  | Value (default)                                                                                                               | Description
 ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------
 tfsec_app                 | tfsec                                                                                                                         | Defines the app to install i.e. **tfsec**
-tfsec_version             | 0.58.14                                                                                                                       | Defined to dynamically fetch the desired version to install. Defaults to: **0.58.14**
+tfsec_version             | 0.59.0                                                                                                                        | Defined to dynamically fetch the desired version to install. Defaults to: **0.59.0**
 tfsec_osarch              | linux-amd64                                                                                                                   | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
 tfsec_dl_url              | "<https://github.com/aquasecurity/{{> tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_osarch }}" | Defines URL to download the tfsec binary from.
 tfsec_bin_path            | "/usr/local/bin/{{ tfsec_app }}"                                                                                              | Defined to dynamically set the appropriate path to store tfsec binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/tfsec**
@@ -74,4 +74,4 @@ For customizing behavior of role (i.e. placing binary of **tfsec** package in di
 
 ## Author Information
 
-This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
+This role was created by [Ali Muhammad](https://www.alimuhammad.dev/).
