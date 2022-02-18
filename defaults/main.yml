@@ -2,8 +2,11 @@
 # defaults file for tfsec
 
 tfsec_app: tfsec
-tfsec_version: 0.63.1
-tfsec_osarch: linux-amd64
-tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_osarch }}
+tfsec_version: 1.2.1
+tfsec_os: linux
+tfsec_arch: amd64
+tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_os }}-{{ tfsec_arch }}
 tfsec_bin_path: "/usr/local/bin/{{ tfsec_app }}"
-tfsec_bin_permission_mode: '0755'
+tfsec_file_owner: root
+tfsec_file_group: root
+tfsec_file_mode: '0755'
