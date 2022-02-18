@@ -17,10 +17,13 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 tfsec_app: tfsec
 tfsec_version: 0.63.1
-tfsec_osarch: linux-amd64
-tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_osarch }}
+tfsec_os: linux
+tfsec_arch: amd64
+tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_os }}-{{ tfsec_arch }}
 tfsec_bin_path: "/usr/local/bin/{{ tfsec_app }}"
-tfsec_bin_permission_mode: '0755'
+tfsec_file_owner: root
+tfsec_file_group: root
+tfsec_file_mode: '0755'
 ```
 
 ### Variables table:
@@ -29,10 +32,14 @@ Variable                  | Description
 ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------
 tfsec_app                 | Defines the app to install i.e. **tfsec**
 tfsec_version             | Defined to dynamically fetch the desired version to install. Defaults to: **0.63.1**
-tfsec_osarch              | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
+tfsec_os                  | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
+tfsec_arch                | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 tfsec_dl_url              | Defines URL to download the tfsec binary from.
 tfsec_bin_path            | Defined to dynamically set the appropriate path to store tfsec binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/tfsec**
 tfsec_bin_permission_mode | Defines the permission mode level for the file.
+tfsec_file_owner          | Owner for the binary file of tfsec.
+tfsec_file_group          | Group for the binary file of tfsec.
+tfsec_file_mode           | Mode for the binary file of tfsec.
 
 ## Dependencies
 
