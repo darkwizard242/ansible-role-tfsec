@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 tfsec_app: tfsec
-tfsec_version: 1.23.3
+tfsec_version: 1.24.0
 tfsec_os: linux
 tfsec_arch: amd64
 tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_os }}-{{ tfsec_arch }}
@@ -31,7 +31,7 @@ tfsec_file_mode: '0755'
 Variable                  | Description
 ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------
 tfsec_app                 | Defines the app to install i.e. **tfsec**
-tfsec_version             | Defined to dynamically fetch the desired version to install. Defaults to: **1.23.3**
+tfsec_version             | Defined to dynamically fetch the desired version to install. Defaults to: **1.24.0**
 tfsec_os                  | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
 tfsec_arch                | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 tfsec_dl_url              | Defines URL to download the tfsec binary from.
