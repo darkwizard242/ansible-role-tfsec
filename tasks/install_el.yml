@@ -2,7 +2,7 @@
 # tasks file for tfsec - EL Family
 
 - name: EL Family | Downloading and setting up {{ tfsec_app }} {{ tfsec_version }}
-  get_url:
+  ansible.builtin.get_url:
     url: "{{ tfsec_dl_url }}"
     dest: "{{ tfsec_bin_path }}"
     owner: "{{ tfsec_file_owner }}"
