@@ -2,7 +2,7 @@
 # defaults file for tfsec
 
 tfsec_app: tfsec
-tfsec_version: 1.28.6
+tfsec_version: 1.28.8
 tfsec_os: "{{ ansible_system | lower }}"
 tfsec_architecture_map:
   amd64: amd64
