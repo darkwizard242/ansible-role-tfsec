@@ -17,9 +17,17 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 tfsec_app: tfsec
 tfsec_version: 1.28.6
-tfsec_os: linux
-tfsec_arch: amd64
-tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_os }}-{{ tfsec_arch }}
+tfsec_os: "{{ ansible_system | lower }}"
+tfsec_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+tfsec_dl_url: https://github.com/aquasecurity/{{ tfsec_app }}/releases/download/v{{ tfsec_version }}/{{ tfsec_app }}-{{ tfsec_os }}-{{ tfsec_architecture_map[ansible_architecture] }}
 tfsec_bin_path: "/usr/local/bin/{{ tfsec_app }}"
 tfsec_file_owner: root
 tfsec_file_group: root
@@ -32,8 +40,8 @@ Variable                  | Description
 ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------
 tfsec_app                 | Defines the app to install i.e. **tfsec**
 tfsec_version             | Defined to dynamically fetch the desired version to install. Defaults to: **1.28.6**
-tfsec_os                  | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
-tfsec_arch                | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
+tfsec_os                  | Defines os type. Used for obtaining the correct type of binaries based on OS type.
+tfsec_architecture_map    | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture.
 tfsec_dl_url              | Defines URL to download the tfsec binary from.
 tfsec_bin_path            | Defined to dynamically set the appropriate path to store tfsec binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/tfsec**
 tfsec_bin_permission_mode | Defines the permission mode level for the file.
