@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 tfsec_app: tfsec
-tfsec_version: 1.28.12
+tfsec_version: 1.28.13
 tfsec_os: "{{ ansible_system | lower }}"
 tfsec_architecture_map:
   amd64: amd64
@@ -39,7 +39,7 @@ tfsec_file_mode: '0755'
 Variable                  | Description
 ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------
 tfsec_app                 | Defines the app to install i.e. **tfsec**
-tfsec_version             | Defined to dynamically fetch the desired version to install. Defaults to: **1.28.12**
+tfsec_version             | Defined to dynamically fetch the desired version to install. Defaults to: **1.28.13**
 tfsec_os                  | Defines os type. Used for obtaining the correct type of binaries based on OS type.
 tfsec_architecture_map    | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture.
 tfsec_dl_url              | Defines URL to download the tfsec binary from.
